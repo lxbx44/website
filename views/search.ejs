@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+
+    
+    <script src="https://kit.fontawesome.com/d90e43a863.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/logo.png">
+
+    <link rel="stylesheet" href="css/search.css">
+    
+    
+    <title>Search Engine</title>
+
+</head>
+
+
+
+
+
+<body>
+
+    <div class="topbar">
+        <div class="links">
+            <a href="https://github.com/rogerrfs/"><i class="fa-brands fa-github"></i></a>
+            <a href="/"><i class="fa-brands fa-slack"></i></a>
+        </div>
+        <div class="info">
+            <a href="/search_info">
+                <i class="fa-solid fa-circle-info"></i>
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <div class="search_bar">
+        <div>
+            <input id="searchBar" type="text" placeholder="Search on my imagination...">
+        </div>
+    </div>
+
+
+    <button id="apps_btn" onclick="openPopUp()">My Applications</button>
+
+
+    <h3 id="clock">00:00</h3>
+    <h3 id="date">Day Month, Year</h3>
+
+
+
+
+    <div id="apps_popup">
+        <button onclick="closePopUp()" class="close_popup"><i class="fa-solid fa-x"></i></button>
+
+
+        <div class="google_apps">
+            <h3>Google Apps <i class="fa-solid fa-chevron-down"></i></h3>
+            <div>
+                <a href="https://mail.google.com/mail/u/0/">
+                    <div>
+                        <img src="img_/google-apps/gmail.png" alt="">
+                    <p>Gmail</p>
+                    </div>
+                </a>
+
+                <a href="https://drive.google.com/drive/my-drive">
+                    <div>
+                        <img src="img_/google-apps/drive.png" alt="">
+                    <p>Drive</p>
+                    </div>
+                </a>
+
+                <a href="https://calendar.google.com/calendar/u/0/r?pli=1">
+                    <div>
+                        <img src="img_/google-apps/calendar.png" alt="">
+                    <p>Calendar</p>
+                    </div>
+                </a>
+
+                <a href="https://photos.google.com/1">
+                    <div>
+                        <img src="img_/google-apps/fotos.png" alt="">
+                    <p>Fotos</p>
+                    </div>
+                </a>
+
+                <a href="https://translate.google.com/">
+                    <div>
+                        <img src="img_/google-apps/translate.png" alt="">
+                    <p>Translate</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="entr">
+            <h3>Entertainment <i class="fa-solid fa-chevron-down"></i></h3>
+            <div>
+                <a href="https://www.youtube.com/">
+                    <div>
+                        <img src="img_/entertainment/youtube.png" alt="">
+                    <p>YouTube</p>
+                    </div>
+                </a>
+
+                <a href="https://www.reddit.com/">
+                    <div style="height:4.5vw; width: auto;">
+                        <img style="max-width: 3.5vw;max-height: 3.5vw;" src="img_/social/reddit.png" alt="">
+                    <p>Reddit</p>
+                    </div>
+                </a>
+
+
+                <a href="https://www.netflix.com">
+                    <div>
+                        <img src="img_/entertainment/netflix.png" alt="">
+                    <p>Netflix</p>
+                    </div>
+                </a>
+
+                <a href="https://app.element.io">
+                    <div>
+                        <img style="max-width: 3.4vw;max-height: 3.4vw;" src="img_/entertainment/element.png" alt="">
+                    <p>Element</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="dev_prg">
+            <h3>Development & Programming <i class="fa-solid fa-chevron-down"></i></h3>
+            <div>
+                <a href="https://github.com/">
+                    <div>
+                        <img src="img_/dev_prg/github.png" alt="">
+                    <p>GitHub</p>
+                    </div>
+                </a>
+
+                <a href="https://about.gitlab.com/">
+                    <div>
+                        <img src="img_/dev_prg/gitlab.png" alt="">
+                    <p>GitLab</p>
+                    </div>
+                </a>
+
+                <a href="https://icons8.com/">
+                    <div>
+                        <img src="img_/dev_prg/icons8.png" alt="">
+                    <p>Icons</p>
+                    </div>
+                </a>
+
+                <a href="https://fontawesome.com/icons">
+                    <div>
+                        <img style="max-width: 3.5vw;max-height: 3.5vw;" src="img_/dev_prg/fa.svg" alt="">
+                    <p>FontAwesome</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="social">
+            <h3>Social <i class="fa-solid fa-chevron-down"></i></h3>
+            <div>
+                <a href="https://www.reddit.com/">
+                    <div style="height:4.5vw; width: auto;">
+                        <img style="max-width: 3.5vw;max-height: 3.5vw;" src="img_/social/reddit.png" alt="">
+                    <p>Reddit</p>
+                    </div>
+                </a>
+
+                <a href="https://web.whatsapp.com/">
+                    <div>
+                        <img src="img_/social/whatsapp.png" alt="">
+                    <p>Whatsapp</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com">
+                    <div>
+                        <img src="img_/social/insta.png" alt="">
+                    <p>Instagram</p>
+                    </div>
+                </a>
+                
+                <a href="https://twitter.com/">
+                    <div>
+                        <img src="img_/social/twitter.png" alt="">
+                    <p>Twitter</p>
+                    </div>
+                </a>
+
+                <a href="https://discord.com/app">
+                    <div>
+                        <img src="img_/social/discord.png" alt="">
+                    <p>Discord</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="chess">
+            <h3>Games <i class="fa-solid fa-chevron-down"></i></h3>
+            <div>
+                <a href="https://www.chess.com/home/">
+                    <div>
+                        <img src="img_/chess/chess-com.png" alt="">
+                    <p>Chess</p>
+                    </div>
+                </a>
+                
+                <a href="https://lichess.org/">
+                    <div>
+                        <img src="img_/chess/lichess.png" alt="">
+                    <p>Lichess</p>
+                    </div>
+                </a>
+
+                <a href="https://shredsauce.com/">
+                    <div>
+                        <img style="max-width: 3.7vw;max-height: 3.7vw;border-radius:10px;" src="img_/chess/shredsauce.jpg" alt="">
+                    <p>Shredsauce</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="info">
+            <h3>Information <i class="fa-solid fa-chevron-down"></i></h3>
+            <div>
+                <a href="https://chat.openai.com/">
+                    <div>
+                        <img src="img_/info/chatgpt.png" alt="">
+                    <p>ChatGPT</p>
+                    </div>
+                </a>
+
+                <a href="https://www.wikipedia.org/">
+                    <div>
+                        <img src="img_/info/wikipedia.png" alt="">
+                    <p>Wikipedia</p>
+                    </div>
+                </a>
+
+                <a href="https://www.wordreference.com/">
+                    <div>
+                        <img src="img_/info/icon.svg" alt="">
+                    <p>Wordreference</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div style="height: 5vh;"></div>
+
+    </div>
+
+    <script src="js/search.js"></script>
+</body>
+</html>

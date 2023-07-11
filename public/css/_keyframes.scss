@@ -1,0 +1,73 @@
+$bg-1: #232634;
+$bg-2: #292c3c;
+$bg-3: #303446;
+
+$white-1: #c6d0f5;
+$white-2: #b5bfe2;
+$white-3: #a5adce;
+
+$blue-1: #babbf1;
+$blue-2: #8caaee;
+$blue-3: #85c1dc;
+$blue-4: #99d1db;
+
+
+$purple: #ca9ee6;
+$green: #a6d189;
+$yellow: #e5c890;
+$orange: #ef9f76;
+$red: #e78284;
+
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 17rem}
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: $blue-1; }
+}
+
+
+// Search
+
+@keyframes out {
+    from {
+        right: 0;
+    }
+    to {
+        right: -500vh;
+    }
+}
+@keyframes in {
+    from {
+        right: -500vh;
+    }
+    to {
+        right: 0;
+    }
+}
+
+
+
+@keyframes popupPrj {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- ! Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- ! Icons -->
+    <script src="https://kit.fontawesome.com/d90e43a863.js" crossorigin="anonymous"></script>
+    
+    <!-- ! Web icons -->
+    <link rel="shortcut icon" href="img/logo.png">
+
+
+    <title>Roger Fibla</title>
+</head>
+<body>
+
+    <div class="topbar">
+        <a href="/"><i class="fa-brands fa-slack"></i> Home</a>
+        <a href="/projects">Projects</a>
+    </div>
+
+    <div class="projects">
+        <div class="proj_title">
+            <h1>My Projects</h1>
+            <div class="proj_proj">
+                <div class="proj_proj-btn">
+                    <div>
+                        <i class="fa-solid fa-minus"></i>
+                        <i class="fa-solid fa-window-restore"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="proj_proj-cont">
+
+                    
+                <!--! ------------- -->
+                <!--! PROJECTS HERE -->
+                <!--! ------------- -->
+
+                    <% result.forEach(function(item) { %>
+                        
+                        <div class="div">
+                            <p><span>$</span> <%= item.name %> <i class="fa-solid fa-arrow-right"></i> <a href="<%= item.page %>">View More</a></p>
+                        </div>
+                    
+                    <% }) %>
+                    
+                    <div class="div">
+                        <p>Coming soon...</p>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!---->
+
+    <script src="/app/js/app.js"></script>
+</body>
+</html>

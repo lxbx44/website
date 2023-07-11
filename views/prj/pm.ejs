@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- ! Styles -->
+    <link rel="stylesheet" href="css/prj_template.css">
+
+    <!-- ! Icons -->
+    <script src="https://kit.fontawesome.com/d90e43a863.js" crossorigin="anonymous"></script>
+    
+    <!-- ! Web icons -->
+    <link rel="shortcut icon" href="img/logo.png">
+
+
+    <title>Roger Fibla</title>
+</head>
+<body>
+
+    <div class="topbar">
+        <a href="/"><i class="fa-brands fa-slack"></i> Home</a>
+        <a href="/projects">Projects</a>
+    </div>
+
+    
+    <div class="content">
+        <div class="main">
+            <h1><img src="https://raw.githubusercontent.com/lxbx44/password_manager/master/.icon/icon.ico"></img>PasswdManager: An Intuitive 
+                Password Management Tool</h1>
+            <div class="pm">
+                <p>Welcome to PasswManager! I'm Aria, and I've developed this intuitive password management tool to help you securely 
+                store and manage your passwords. </p>
+                <p>With this password manager, you can easily keep track of your passwords while ensuring they are encrypted and protected. 
+                Let me guide you through how it works and how you can customize it to fit your needs.</p>
+                <h2>Installation</h2>
+                <p>To get started with PasswdManager, follow the installation instructions below:</p>
+                <h3>Requirements</h3>
+                <ul>
+                    <li class="col" style="width: fit-content;padding: 0 0.7rem;">Python 3</li>
+                    <li class="col" style="width: fit-content;padding: 0 0.7rem;">pip</li>
+                </ul>
+                <h4>Install Python and pip</h4>
+                <p>Before installing PasswdManager, make sure you have Python and pip installed on your system. Here's how to install 
+                them:</p>
+                <h5>Ubuntu:</h5>
+
+
+                <p class="code">
+                sudo apt-get update
+                </p>
+                <p class="code">
+                sudo apt-get install python3
+                </p>
+                <p class="code">
+                sudo apt install python3-pip
+                </p>
+
+
+                <h5>ArchLinux:</h5>
+
+
+                <p class="code">
+                sudo pacman -Syu
+                </p>
+                <p class="code">
+                yay -S python3
+                </p>
+                <p class="code">
+                yay -S python-pip
+                </p>
+
+
+                <h5>Windows:</h5>
+                <p>Download Python from the <a href="https://www.python.org/downloads/">official website</a>.
+                Follow the installation instructions and make sure to add Python to your system PATH.</p>
+                <h4>Clone and Install</h4>
+                <ol>
+                    <li>Clone the project's repository:</li>
+                </ol>
+
+
+                <p class="code">
+                git clone https://github.com/lxbx44/password_manager.git
+                </p>
+                <p class="code">
+                cd password_manager/
+                </p>
+
+
+                <ol start="2">
+                    <li>Install the required dependencies:</li>
+                </ol>
+
+
+                <p class="code">
+                pip install -r requirements.txt
+                </p>
+
+
+                <h2>Usage</h2>
+                <p>To start using the program, run the following command in the project directory:</p>
+                
+
+                <p class="code">
+                python3 main.py
+                </p>
+                
+
+                <p>Once the program starts, you'll be prompted to enter your password to access the password management features.
+                If it's your first time running the program, you'll need to create a password, which will be encrypted for future logins.</p>
+                <h3>Main Features</h3>
+                <h4 class="bold_a">1. View Passwords</h4>
+                <p>By selecting the "passwd" option, you can see a list of all the passwords you have stored in the password manager.</p>
+                <p>The list of passwords is retrieved from the <span class="col">`data.json`</span> file using the <span class="col">`created_passwords`</span> key. This file is 
+                stored in the <span class="col">`data`</span> directory.</p>
+                <h4 class="bold_a">2. Import a New Password</h4>
+                <p>You can import a new password by choosing option "1". This feature allows you to provide a name for the password 
+                and enter the password itself. The entered password will be encrypted and securely stored.</p>
+                <p>The password is encrypted using the <span class="col">`cryptography.fernet`</span> module, which utilizes a
+                key derived from your master password using the
+                PBKDF2HMAC algorithm.</p>
+                <h4 class="bold_a">3. Search for a Password</h4>
+                <p>To search for a specific password, select option "2". Enter the name of the password you want to retrieve, 
+                and the program will decrypt and display it if it exists.</p>
+                <p>When searching for a password, the program retrieves the encrypted password from the corresponding file in 
+                the <span class="col">`data/passwd`</span> directory. The password is then decrypted using the same key derived from your master password.</p>
+                <h4 class="bold_a">4. Delete a Password</h4>
+                <p>If you want to delete a password, choose option "3". Enter the name of the password you want to delete, and if it 
+                exists, you'll be prompted to confirm the deletion.</p>
+                <p>When deleting a password, the program removes the corresponding file from the <span class="col">`data/passwd`</span> directory. It also 
+                updates the <span class="col">`data.json`</span> file by removing the password name from the <span class="col">`created_passwords`</span> list.</p>
+                <h4 class="bold_a">5. Generate a New Secure Password</h4>
+                <p>Option "4" allows you to generate a new secure password. Specify the desired length, and the program will 
+                generate a random password containing a combination of letters, digits, and special characters.</p>
+                <p>The password generation feature utilizes the <span class="col">`string`</span> and <span class="col">`random`</span> modules to generate a random password
+                based on the specified length. The password is displayed to the user for their reference.</p>
+                <h4 class="bold_a">6. Assess Password Strength</h4>
+                <p>With option "5", you can assess the strength of a password. After entering a password, the program will evaluate
+                its security based on length, character types (uppercase, lowercase, digits, special characters), and provide a 
+                percentage score. It will also provide suggestions for improving the password's strength.</p>
+                <h4 class="bold_a">7. Exit the Program</h4>
+                <p>To exit the password manager, select option "q".</p>
+                <h3>Deleting All Passwords</h3>
+                <p>If you wish to delete all passwords and associated information stored by the program, you can enter "deleteall" 
+                at the main prompt. The program will ask for confirmation before deleting all data.</p>
+                <h2>Customization</h2>
+                <p>PasswdManager can be customized according to your preferences. You can modify the program's behavior and
+                appearance by making changes to the <span class="col">`main.py`</span> file.</p>
+                <ul>
+                    <li>You can change the program's title and ASCII art in the <span class="col">`title()`</span> function.</li>
+                    <li>The password encryption algorithm and parameters can be adjusted in the <span class="col">`key()`</span> function.</li>
+                    <li>The program's user interface and functionality can be modified by editing the main loop and its associated 
+                        functions.</li>
+                </ul>
+                <p>Please exercise caution while customizing the program to avoid introducing any security vulnerabilities or 
+                compromising the functionality of the program.</p>
+                <h2>Conclusion</h2>
+                <p>PasswdManager provides an intuitive and secure solution for managing your passwords. By using this tool, 
+                you can simplify the process of storing and accessing your passwords while ensuring they remain protected. 
+                Feel free to customize it to fit your specific requirements. Give it a try and enjoy a more organized
+                and secure approach to password management!</p>
+
+                <br><br><br>
+
+            </div>
+        </div>
+
+        <div class="info">
+            <h3><i class="fa-solid fa-file"></i> Project Name:</h3>
+            <p>PasswdManager</p>
+            <br>
+
+            <h3><i class="fa-solid fa-user"></i> Author:</h3>
+            <p>Aria</p>
+            <br>
+            
+                <h3><i class="fa-solid fa-users"></i> Contributors</h3>
+                <p>Slushee</p>
+                <br>
+            
+            <h3><i class="fa-solid fa-code"></i> Programming language:</h3>
+            <p>Python <i class="fa-brands fa-python"></i></p>
+            <br>
+
+            <h3><i class="fa-brands fa-github"></i> GitHub:</h3>
+            <p><a href="https://github.com/lxbx44/password_manager/">repo</a></p>
+            <br>
+
+            <h3><i class="fa-solid fa-stamp"></i> License</h3>
+            <p>Apache-2.0 license</p>
+
+        </div>
+    </div>
+    
+    <div class="popup">Text Copied!</div>
+<!---->
+
+    <script src="js/prj_temp.js"></script>
+</body>
+</html>
+

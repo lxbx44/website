@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* The typing effect */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17rem;
+  }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #babbf1;
+  }
+}
+@keyframes out {
+  from {
+    right: 0;
+  }
+  to {
+    right: -500vh;
+  }
+}
+@keyframes in {
+  from {
+    right: -500vh;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes popupPrj {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "JetBrains Mono", monospace;
+}
+
+body {
+  background-color: #232634;
+  font-family: "JetBrains Mono", monospace;
+  overflow-x: hidden;
+}
+
+.topbar {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.topbar a {
+  text-decoration: none;
+  color: #babbf1;
+  font-size: 1.7rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 100px;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.topbar a:hover {
+  color: #232634;
+  background-color: #99d1db;
+  border-radius: 20px;
+}
+
+.code {
+  color: #99d1db;
+  background-color: #303446;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+}
+
+.hov_copy {
+  padding: 0.1rem 0.4rem;
+}
+
+.hov_copy:hover {
+  background-color: gray;
+  border-radius: 15px;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto auto;
+  min-height: 100vh;
+}
+.content .main {
+  height: 90vh;
+  width: 50vw;
+  margin-left: 10vw;
+}
+.content .main * {
+  line-height: 1.5;
+}
+.content .main h1 {
+  color: #babbf1;
+  margin: 2rem 0rem;
+}
+.content .main h1 img {
+  margin-right: 0.5rem;
+  width: 1.8rem;
+}
+.content .main .bold_a {
+  font-weight: bold;
+}
+.content .main .col {
+  color: #99d1db;
+  background-color: #303446;
+  border-radius: 5px;
+}
+.content .main .pm {
+  height: auto;
+  margin: 0;
+  color: #babbf1;
+}
+.content .main .pm h2 {
+  margin-top: 2rem;
+}
+.content .main .pm h3 {
+  margin-top: 1.75rem;
+}
+.content .main .pm h4 {
+  margin-top: 1.5rem;
+}
+.content .main .pm h5 {
+  margin-top: 1.25rem;
+}
+.content .main .pm p {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+}
+.content .main .pm ul, .content .main .pm ol {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.content .main .pm ul li, .content .main .pm ol li {
+  margin-top: 0.75rem;
+}
+.content .main .pm a {
+  text-decoration: underline;
+  color: #99d1db;
+}
+.content .main .pm a:hover {
+  background-color: #99d1db;
+  color: #232634;
+  border-radius: 5px;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.content .info {
+  background-color: #303446;
+  position: fixed;
+  height: auto;
+  width: auto;
+  right: 6vw;
+  padding: 2rem 3rem;
+  padding-bottom: 3rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  color: #babbf1;
+}
+.content .info h3 {
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+  font-weight: bold;
+}
+.content .info p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #99d1db;
+}
+.content .info p a {
+  text-decoration: underline;
+  color: #99d1db;
+}
+.content .info p a:hover {
+  background-color: #99d1db;
+  color: #232634;
+  border-radius: 5px;
+  transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.popup {
+  position: fixed;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #a6d189;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=prj_template.css.map */
